@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        :root {
+            --primary-color: lightblue;
+            --secondary-color: red;
+            --border-color: black;
+        }
+
+        @keyframes move{
+            0% {
+                left: 0;
+                top:0;
+            }
+            25% {
+                left: 85.5%;
+                top: 0;
+                right: 0;
+            }
+            50% {
+                left: 85.5%;
+                top: 320px;
+                right: 0;
+            }
+            75% {
+                left: 0;
+                top: 320px;
+                right: 85.5%;
+            }
+            100% {
+                left: 0;
+                top:0;
+            }
+        }
+        .stage {
+            height: calc(500px - 100px);
+            background-color: var(--primary-color);
+            border: 2px solid var(--border-color);
+        }
+
+        .stage:hover {
+            background-color: saddlebrown;
+        }
+        /* .stage:hover .text {
+            transform:rotate(-90deg);
+            transform-origin: top right;
+        } */
+
+        .text {
+            color: var(--secondary-color);
+            background-color: var(--border-color);
+            display: inline-block;
+            position: relative;
+            /* transition: transform 3s ease-in-out 0.1s; */
+            animation: move 10s ease-in-out 0.1s infinite forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="stage">
+        <div class="text"><h1>PIAS MAJUMDAR</h1></div>
+    </div>
+</body>
+</html>
